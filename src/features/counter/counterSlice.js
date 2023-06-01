@@ -87,6 +87,7 @@ export const selectCount = (state) => state.counterState.value;
 export const incrementIfOdd = (amount) => (dispatch, getState) => {
   const currentValue = selectCount(getState());
   if (currentValue % 2 === 1) {
+    // incrementByAmount(amount) will return an action
     dispatch(incrementByAmount(amount));
   }
 };
